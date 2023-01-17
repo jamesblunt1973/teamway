@@ -1,0 +1,14 @@
+.content {
+	width: calc(100% - 60px);
+	padding: 0 30px;
+
+	.commands {
+		display: flex;
+		margin-top: 30px;
+		gap: 10px;
+
+		button:last-child {
+			margin-left: auto;
+		}
+	}
+}

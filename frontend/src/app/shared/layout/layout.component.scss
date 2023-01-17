@@ -1,0 +1,10 @@
+.background {
+  width: 100vw;
+  height: 100vh;
+  background: url("../../../assets/bg.webp") no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

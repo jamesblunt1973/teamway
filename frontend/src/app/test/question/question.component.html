@@ -1,0 +1,6 @@
+<p class="question">{{ question.text }}</p>
+<mat-radio-group [(ngModel)]="selectedAnswer" (change)="selectAnswer()">
+	<mat-radio-button *ngFor="let answer of question.answers" [value]="answer">
+		{{ answer.text }}
+	</mat-radio-button>
+</mat-radio-group>

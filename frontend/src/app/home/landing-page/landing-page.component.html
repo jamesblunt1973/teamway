@@ -1,0 +1,7 @@
+<app-layout>
+	<h1 class="header">Welcome to my personality test</h1>
+	<div class="loading" *ngIf="loading">Loading...</div>
+	<button *ngIf="!loading" mat-raised-button color="primary" routerLink="/start">
+		Start the test
+	</button>
+</app-layout>

@@ -1,0 +1,35 @@
+<app-layout>
+	<div class="content">
+		<app-question
+			[question]="questions[currentQuestionId]"
+			(select)="questions[currentQuestionId].selectedAnswer = $event"
+		></app-question>
+		<div class="commands">
+			<button
+				mat-raised-button
+				(click)="currentQuestionId = currentQuestionId - 1"
+				[disabled]="currentQuestionId <= 0"
+			>
+				Previous
+			</button>
+			<button
+				mat-raised-button
+				(click)="currentQuestionId = currentQuestionId + 1"
+				[disabled]="
+					currentQuestionId >= questions.length - 1 ||
+					!questions[currentQuestionId].selectedAnswer
+				"
+			>
+				Next
+			</button>
+			<button
+				mat-raised-button
+				color="primary"
+				[disabled]="!resultReady"
+				(click)="showResult()"
+			>
+				Show Result
+			</button>
+		</div>
+	</div>
+</app-layout>
